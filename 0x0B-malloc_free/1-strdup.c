@@ -4,10 +4,11 @@
 #include "main.h"
 
 /**
- * _strdup - returns a pointer to a newly allocated space in memory,
+ * _strdup - returns a pointer to a newly allocated space in memory
  * which contains a copy of the string given as a parameter.
  * @str:string
- * return:0
+ * Return: returns a pointer to the duplicated string.
+ * It returns NULL if insufficient memory was available
  */
 
 char *_strdup(char *str)
@@ -22,8 +23,8 @@ char *_strdup(char *str)
 	g = malloc(size * sizeof(*str) + 1);
 	if (g == 0)
 		return (NULL);
-	for (; i < size; ++i)
-	;
+	for (; i < size; i++)
+		;
 	{
 		g[i] = str[i];
 	}
