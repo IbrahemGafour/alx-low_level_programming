@@ -1,15 +1,17 @@
 #include <stdio.h>
 
 /**
- * main -  prints the name of the program.
- * @argc: int
- * @argv: list
- * return: 0
- */
+  * main -  prints the name of the program.
+  * @argc: argument count i could used "(void)argc" inside main instead of
+  * "__attribute__ ((unused))" to avoid unused var warning
+  * @argv: arguments
+  *
+  * Return: 0
+  */
 
-int main(int argc, char const *argv[])
+int main(int __attribute__ ((unused)) argc, char **argv)
 {
-	(void)argc;
+
 	printf("%s\n", argv[0]);
 	return (0);
 }
